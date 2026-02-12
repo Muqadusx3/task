@@ -1,0 +1,667 @@
+{
+  "info": {
+    "_postman_id": "ca392fad-37a9-4d3b-968e-05fb3c914a3b",
+    "name": "Task 4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43461916"
+  },
+  "item": [
+    {
+      "name": "GET",
+      "item": [
+        {
+          "name": "List of all objects",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.restful-api.dev/objects",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Single object",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.restful-api.dev/objects/7",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List of objects by ids",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.restful-api.dev/objects?id=3&id=5&id=10",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "3"
+                },
+                {
+                  "key": "id",
+                  "value": "5"
+                },
+                {
+                  "key": "id",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST",
+      "item": [
+        {
+          "name": "Add object",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\"\r\n   }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.restful-api.dev/objects",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PUT",
+      "item": [
+        {
+          "name": "Update object",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 2049.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\",\r\n      \"color\": \"silver\"\r\n   }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.restful-api.dev/objects/7",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PATCH",
+      "item": [
+        {
+          "name": "Partially update object",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\": \"Apple MacBook Pro 16 (Updated Name)\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.restful-api.dev/objects/7",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DELETE",
+      "item": [
+        {
+          "name": "Delete object",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.restful-api.dev/objects/6",
+              "protocol": "https",
+              "host": [
+                "api",
+                "restful-api",
+                "dev"
+              ],
+              "path": [
+                "objects",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rest Countries",
+      "item": [
+        {
+          "name": "REST Countries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/all?fields=name,flags",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "all"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,flags"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REST Countries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/independent?status=true",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "independent"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Independent",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/independent?status=true&fields=languages,capital",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "independent"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "true"
+                },
+                {
+                  "key": "fields",
+                  "value": "languages,capital"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Independent",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/all",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get through name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/name/eesti",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "name",
+                "eesti"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get through name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/name/deutschland",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "name",
+                "deutschland"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET through full name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/name/aruba?fullText=true",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "name",
+                "aruba"
+              ],
+              "query": [
+                {
+                  "key": "fullText",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET through code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/alpha/co",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "alpha",
+                "co"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET through code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/alpha/col",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "alpha",
+                "col"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET through code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/alpha/170",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "alpha",
+                "170"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List of codes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/alpha?codes=170,no,est,pe",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "alpha"
+              ],
+              "query": [
+                {
+                  "key": "codes",
+                  "value": "170,no,est,pe"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "currency",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/currency/cop",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "currency",
+                "cop"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Demonym",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/demonym/peruvian",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "demonym",
+                "peruvian"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Language",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/lang/spanish",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "lang",
+                "spanish"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Capital city",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/capital/tallinn",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "capital",
+                "tallinn"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "region",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/region/europe",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "region",
+                "europe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub region",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/subregion/Northern Europe",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "subregion",
+                "Northern Europe"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter response",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/all?fields=name,capital,currencies",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "all"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,capital,currencies"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Translation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://restcountries.com/v3.1/translation/germany",
+              "protocol": "https",
+              "host": [
+                "restcountries",
+                "com"
+              ],
+              "path": [
+                "v3.1",
+                "translation",
+                "germany"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
